@@ -4,7 +4,7 @@ def test_positive():
     assert Sum(5, 1) == 6
 
 def test_negative():
-    assert Sum(-1, -3) == -3
+    assert Sum(-1, -3) == -4
 
 
 def test_zero():
