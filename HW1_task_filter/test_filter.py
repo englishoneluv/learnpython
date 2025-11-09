@@ -20,7 +20,7 @@ def test_some():
     assert after_filtering == [2, 4, 5]
 
 def test_all():
-    f = Filter([[1, 2, 3, 4, 5]])
+    f = Filter([1, 2, 3, 4, 5])
     container = [1, 2, 3, 4, 5]
     after_filtering = f.Apply(container) 
     assert after_filtering == []

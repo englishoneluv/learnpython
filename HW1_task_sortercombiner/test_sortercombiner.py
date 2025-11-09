@@ -38,6 +38,6 @@ def test_max_load():
         new_load = [x for x in range(i, i + 3)]
         sc.LoadNew(new_load)
     
-    result = list([i for i in range(20)])     
+    result = list([i for i in range(21)])     
     assert sc.GetData() == result
     

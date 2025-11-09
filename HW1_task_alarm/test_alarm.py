@@ -5,6 +5,7 @@ def test_early():
     a = Alarm(5)
     time = 4
     assert a.isEarly(time) == True
+    assert a.isTooLate(time) == False
 
 
 def test_on_time():
