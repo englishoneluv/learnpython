@@ -29,8 +29,8 @@ def test_all():
 def test_speed():
     start = time.perf_counter()
 
-    f = Filter([i for i in range(300000)])
-    container = [i for i in range(0, 300000, 100)]
+    f = Filter([i for i in range(500000)])
+    container = [i for i in range(0, 500000, 100)]
     after_filtering = f.Apply(container)
 
     duration = time.perf_counter() - start
