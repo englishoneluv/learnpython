@@ -1,4 +1,5 @@
 from filter import Filter
+import time
 
 
 def test_empty():
@@ -24,3 +25,13 @@ def test_all():
     container = [1, 2, 3, 4, 5]
     after_filtering = f.Apply(container) 
     assert after_filtering == []
+
+def test_speed():
+    start = time.perf_counter()
+
+    f = Filter([i for i in range(300000)])
+    container = [i for i in range(0, 300000, 100)]
+    after_filtering = f.Apply(container)
+
+    duration = time.perf_counter() - start
+    assert duration < 1, f"Duration: {duration:.4f} seconds > 1 sec"
